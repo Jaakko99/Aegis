@@ -16,7 +16,7 @@ defmodule AegisWeb.Router do
 
   scope "/", AegisWeb do
     pipe_through :browser
-
+    live "/lab", LabLive
     get "/", PageController, :home
   end
 
