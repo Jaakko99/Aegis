@@ -14,7 +14,7 @@ defmodule Aegis.StressWorker do
   def handle_info(:perform_task, id) do
     # 30% chance to simulate a catastrophic failure
     if :rand.uniform(10) > 7 do
-      Logger.error("💥 CRITICAL FAILURE: Worker #{id} encountered an unhandled exception!")
+      Logger.error("CRITICAL FAILURE: Worker #{id} encountered an unhandled exception!")
       raise "Aegis Chaos Triggered"
     end
 

@@ -27,5 +27,4 @@ To run the Aegis lab locally:
 4. Start the server: `mix phx.server`
 5. Visit `localhost:4000` to see the heartbeat.
 
----
 *Built to explore the limits of fault-tolerant distributed systems.*
