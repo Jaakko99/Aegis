@@ -1,18 +1,31 @@
-# Aegis
 
-To start your Phoenix server:
+# Aegis: Resilience & Chaos Lab
 
-* Run `mix setup` to install and setup dependencies
-* Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+Aegis is a fault-tolerant simulation environment built with **Elixir** and **Phoenix LiveView**. It demonstrates the power of the **BEAM VM** (Erlang) by simulating system-wide stress, process crashes, and automated recovery via Supervision Trees.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+### The "Aegis" Goal
+In most systems, a crash is a disaster. In Aegis, a crash is a planned event. This lab utilizes **GenServers** to handle "unreliable" work and **Supervisors** to act as the shield, ensuring zero downtime even when individual workers encounter critical failures.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+### Core Tech Stack
+* **Language:** Elixir 1.19.5 (OTP 26)
+* **Framework:** Phoenix (LiveView for real-time monitoring)
+* **Runtime:** The BEAM (Erlang Virtual Machine)
+* **Design Pattern:** Supervision Trees (Let It Crash)
 
-## Learn more
+### Key Features
+- **Deterministic Chaos:** Simulated workers with randomized failure rates.
+- **Self-Healing:** Supervision strategies that restart crashed processes in milliseconds.
+- **Process Isolation:** Proving that a failure in one worker cannot bring down the entire node.
+- **Real-time Visualization:** (Planned) A LiveView dashboard to watch the "Shield" in action.
 
-* Official website: https://www.phoenixframework.org/
-* Guides: https://hexdocs.pm/phoenix/overview.html
-* Docs: https://hexdocs.pm/phoenix
-* Forum: https://elixirforum.com/c/phoenix-forum
-* Source: https://github.com/phoenixframework/phoenix
+### Local Development
+To run the Aegis lab locally:
+
+1. Install Erlang/OTP 26 and Elixir 1.19.
+2. Clone this repo.
+3. Install dependencies: `mix deps.get`
+4. Start the server: `mix phx.server`
+5. Visit `localhost:4000` to see the heartbeat.
+
+---
+*Built to explore the limits of fault-tolerant distributed systems.*
