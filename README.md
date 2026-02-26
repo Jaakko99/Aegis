@@ -1,4 +1,4 @@
-# 🛡️ Aegis: The Framework Siege Lab
+# Aegis: The Framework Siege Lab
 
 Aegis is a high-concurrency stress-testing engine built with **Elixir** and **Phoenix LiveView**. While most labs study internal stability, Aegis is designed as an "Aggressor" to benchmark the resilience of modern frontend frameworks (React, Angular, Vue) under extreme simulated load.
 
@@ -17,7 +17,7 @@ How much pressure can a single-threaded JavaScript environment take before the E
 - **Crash Recovery:** Demonstrates Elixir's "Let it Crash" philosophy while the target framework struggles with memory leaks or UI freezes.
 - **Framework Scorecards:** Comparative data on how Angular's Change Detection vs. React's Virtual DOM handles sustained high-frequency updates.
 
-### 🛠️ Local Development
+### Local Development
 1. **Clone the lab:** `git clone ...`
 2. **Setup Elixir:** `mix deps.get`
 3. **Launch the Siege Engine:** `mix phx.server`
